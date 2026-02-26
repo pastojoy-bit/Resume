@@ -76,8 +76,8 @@ const Index = () => {
             <a href="tel:+19187149854" className="glass rounded-full px-5 py-2.5 flex items-center gap-2 text-primary-foreground hover:bg-primary-foreground/10 transition-colors">
               <Phone size={15} /> (918) 714-9854
             </a>
-            <a href="mailto:joypasto@yahoo.com" className="glass rounded-full px-5 py-2.5 flex items-center gap-2 text-primary-foreground hover:bg-primary-foreground/10 transition-colors">
-              <Mail size={15} /> joypasto@yahoo.com
+            <a href="mailto:pastojoy@gmail.com" className="glass rounded-full px-5 py-2.5 flex items-center gap-2 text-primary-foreground hover:bg-primary-foreground/10 transition-colors">
+              <Mail size={15} /> pastojoy@gmail.com
             </a>
             <span className="glass rounded-full px-5 py-2.5 flex items-center gap-2 text-primary-foreground">
               <MapPin size={15} /> Tulsa / Broken Arrow, OK
@@ -190,8 +190,8 @@ const Index = () => {
             <a href="tel:+19187149854" className="flex items-center justify-center gap-2 hover:text-accent transition-colors">
               <Phone size={16} /> (918) 714-9854
             </a>
-            <a href="mailto:joypasto@yahoo.com" className="flex items-center justify-center gap-2 hover:text-accent transition-colors">
-              <Mail size={16} /> joypasto@yahoo.com
+            <a href="mailto:pastojoy@gmail.com" className="flex items-center justify-center gap-2 hover:text-accent transition-colors">
+              <Mail size={16} /> pastojoy@gmail.com
             </a>
             <span className="flex items-center justify-center gap-2 opacity-70">
               <MapPin size={16} /> Tulsa / Broken Arrow, OK
