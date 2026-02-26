@@ -19,22 +19,22 @@ const experience = [
     role: "Cashier / Customer Service Associate",
     period: "June 2008 – February 2025",
     highlights: [
-      "Delivered exceptional customer service for over 16 years",
-      "Processed high-volume transactions accurately using POS systems",
-      "Handled cash, credit/debit cards, and various payment methods",
-      "Maintained a clean, organized checkout area",
-      "Assisted with stocking, merchandising, and store upkeep",
+      "Served as a reliable front-end cashier for over 16 years with high accuracy and customer satisfaction",
+      "Operated registers to itemize and total purchases, processing payments via cash, check, credit/debit, EBT, and WIC",
+      "Maintained a balanced cash drawer at the start and end of every shift",
+      "Assisted with light organization of the front checkout area for a clean shopping environment",
       "Trained and mentored new cashiers",
     ],
+    note: "Reason for leaving: Store Closure",
   },
   {
     company: "Dollar Tree",
     role: "Cashier",
     period: "November 2017 – May 2018",
     highlights: [
-      "Operated registers efficiently in a fast-paced environment",
-      "Provided friendly, attentive customer service",
-      "Assisted with restocking shelves and maintaining store appearance",
+      "Provided efficient checkout services in a fast-paced retail setting",
+      "Greeted customers upon entry and answered questions regarding merchandise location",
+      "Handled cash transactions and processed returns in compliance with store policy",
     ],
   },
 ];
@@ -73,8 +73,8 @@ const Index = () => {
           </p>
 
           <div className="flex flex-wrap justify-center gap-3 text-sm mb-12">
-            <a href="tel:+19187149854" className="glass rounded-full px-5 py-2.5 flex items-center gap-2 text-primary-foreground hover:bg-primary-foreground/10 transition-colors">
-              <Phone size={15} /> (918) 714-9854
+            <a href="tel:+16194561731" className="glass rounded-full px-5 py-2.5 flex items-center gap-2 text-primary-foreground hover:bg-primary-foreground/10 transition-colors">
+              <Phone size={15} /> (619) 456-1731
             </a>
             <a href="mailto:pastojoy@gmail.com" className="glass rounded-full px-5 py-2.5 flex items-center gap-2 text-primary-foreground hover:bg-primary-foreground/10 transition-colors">
               <Mail size={15} /> pastojoy@gmail.com
@@ -85,7 +85,10 @@ const Index = () => {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 mt-2 mb-12">
-            <a href="#about" className="inline-flex items-center gap-2 text-xs uppercase tracking-widest opacity-60 hover:opacity-100 transition-opacity">
+            <a href="/Joy_Pasto_Resume.pdf" download className="glass rounded-full px-6 py-3 flex items-center gap-2 text-primary-foreground font-semibold hover:bg-primary-foreground/20 transition-colors">
+              <Download size={16} /> Download Resume
+            </a>
+            <a href="#about" className="inline-flex items-center gap-2 text-xs uppercase tracking-widest opacity-60 hover:opacity-100 transition-opacity self-center">
               <ArrowDown size={14} className="animate-bounce" /> Scroll to learn more
             </a>
           </div>
@@ -186,9 +189,12 @@ const Index = () => {
                         {h}
                       </li>
                     ))}
-                  </ul>
-                </div>
-              </RevealSection>
+                   </ul>
+                   {"note" in job && (job as any).note && (
+                     <p className="text-xs text-muted-foreground italic mt-3">{(job as any).note}</p>
+                   )}
+                 </div>
+               </RevealSection>
             ))}
           </div>
         </div>
@@ -211,8 +217,8 @@ const Index = () => {
           <h2 className="text-2xl font-bold mb-2">Let's Connect</h2>
           <p className="text-sm opacity-60 mb-8">I'd love to hear about opportunities in the Tulsa area.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-6 text-sm mb-10">
-            <a href="tel:+19187149854" className="flex items-center justify-center gap-2 hover:text-accent transition-colors">
-              <Phone size={16} /> (918) 714-9854
+            <a href="tel:+16194561731" className="flex items-center justify-center gap-2 hover:text-accent transition-colors">
+              <Phone size={16} /> (619) 456-1731
             </a>
             <a href="mailto:pastojoy@gmail.com" className="flex items-center justify-center gap-2 hover:text-accent transition-colors">
               <Mail size={16} /> pastojoy@gmail.com
