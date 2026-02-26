@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import { Phone, Mail, MapPin, Briefcase, Clock, Star, Users, CreditCard, ShieldCheck, RefreshCw, ArrowDown } from "lucide-react";
+import { Phone, Mail, MapPin, Briefcase, Clock, Star, Users, CreditCard, ShieldCheck, RefreshCw, ArrowDown, Download, CalendarCheck, Award, UserCheck } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -84,11 +84,35 @@ const Index = () => {
             </span>
           </div>
 
-          <a href="#about" className="inline-flex items-center gap-2 text-xs uppercase tracking-widest opacity-60 hover:opacity-100 transition-opacity">
-            <ArrowDown size={14} className="animate-bounce" /> Scroll to learn more
-          </a>
+          <div className="flex flex-wrap justify-center gap-4 mt-2 mb-12">
+            <a href="#about" className="inline-flex items-center gap-2 text-xs uppercase tracking-widest opacity-60 hover:opacity-100 transition-opacity">
+              <ArrowDown size={14} className="animate-bounce" /> Scroll to learn more
+            </a>
+          </div>
         </div>
       </header>
+
+      {/* Stats Bar */}
+      <section className="relative z-10 -mt-10 mb-0">
+        <div className="mx-auto max-w-4xl px-6">
+          <RevealSection>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              {[
+                { icon: CalendarCheck, value: "16+", label: "Years Experience" },
+                { icon: UserCheck, value: "1000s", label: "Customers Served" },
+                { icon: Award, value: "99%", label: "Attendance Record" },
+                { icon: Clock, value: "Part-Time", label: "Availability" },
+              ].map((stat) => (
+                <div key={stat.label} className="bg-card rounded-2xl border border-border/50 shadow-lg p-5 text-center">
+                  <stat.icon size={20} className="mx-auto mb-2 text-accent" />
+                  <p className="text-2xl md:text-3xl font-extrabold text-foreground">{stat.value}</p>
+                  <p className="text-xs text-muted-foreground mt-1">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </RevealSection>
+        </div>
+      </section>
 
       {/* About */}
       <section id="about" className="py-20 md:py-28">
